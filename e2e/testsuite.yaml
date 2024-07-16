@@ -431,3 +431,15 @@ items:
     header:
       Authorization: Bearer {{.login.data.token}}
       Content-type: application/json
+
+- name: saveMonitor
+  request:
+    api: /api/monitor
+    method: PUT
+    header:
+      Authorization: Bearer {{.login.data.token}}
+      Content-type: application/json
+    bodyFromFile: data/save-monitor.json
+  expect:
+    bodyFieldsExpect:
+      code: "0"
