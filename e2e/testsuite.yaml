@@ -435,7 +435,7 @@ items:
 - name: saveMonitor
   request:
     api: /api/monitor
-    method: PUT
+    method: POST
     header:
       Authorization: Bearer {{.login.data.token}}
       Content-type: application/json
